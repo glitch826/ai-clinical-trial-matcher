@@ -8,7 +8,8 @@ from google import genai
 from google.genai import types
 
 # Initialize Gemini Client (usesenv:GEMINI_API_KEY or explicit key)
-client = genai.Client(api_key="AQ.Ab8RN6KWRAaZ56V0cGNkKyfuxlhCGFmHEiE2HVOUNSy2S2jlPg")
+api_key = os.getenv("GEMINI_API_KEY")
+client = genai.Client(api_key=api_key)
 
 CLINICAL_TRIALS_API = "https://clinicaltrials.gov/api/v2/studies"
 
